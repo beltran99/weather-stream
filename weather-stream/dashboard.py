@@ -14,7 +14,7 @@ st.set_page_config(page_title="🌦️ Real-Time Weather Dashboard", layout="wid
 
 TOPIC = "weather-data"
 BOOTSTRAP = "localhost:9092"
-MAX_ROWS = 86
+MAX_ROWS = 100
 REFRESH_INTERVAL_MS = 30000  # 30 seconds
 
 # Trigger periodic reruns
@@ -77,7 +77,7 @@ if new_forecast is not None:
 df = st.session_state.data
 
 # --- UI ---
-st.title("🌦️ Real-Time Weather Dashboard")
+st.title("🌦️ Real-Time Weather Forecast")
 st.caption(f"Auto-updating every {REFRESH_INTERVAL_MS/1000:.0f}s from Kafka topic: '{TOPIC}'")
 temp_placeholder = st.empty()
 humidity_placeholder = st.empty()
