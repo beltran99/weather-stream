@@ -46,17 +46,17 @@ pip install -r requirements.txt
 ## Setting up
 Setup the docker container
 ```bash
-sudo docker compose up -d
+docker compose up -d
 ```
 
 Create the Kafka topic inside the docker container for the weather stream
 ```bash
-sudo docker exec -it kafka /opt/kafka/bin/kafka-topics.sh --bootstrap-server localhost:9092 --create --topic weather-data --partitions 1 --replication-factor 1
+docker exec -it kafka /opt/kafka/bin/kafka-topics.sh --bootstrap-server localhost:9092 --create --topic weather-data --partitions 1 --replication-factor 1
 ```
 
 Check that the Kafka topic has been correctly created
 ```bash
-sudo docker exec -it kafka /opt/kafka/bin/kafka-topics.sh --bootstrap-server localhost:9092 --list
+docker exec -it kafka /opt/kafka/bin/kafka-topics.sh --bootstrap-server localhost:9092 --list
 ```
 
 Run the Kafka producer in the background
