@@ -5,7 +5,7 @@ Real-time weather data pipeline built with Docker, Apache Kafka, Open-Meteo API,
 
 - This project uses Docker to handle and deploy Kafka in a container.
 - The Kafka producer regularly fetches and publishes the weather forecast on your estimated location (based on your IP address).
-- The Kafka consumer, a Streamlit dashboard, reads the messages from the producer and visualizes them on an interactive real-time dashboard.
+- The Kafka consumer is a Streamlit dashboard that reads the messages from the producer and visualizes them on an interactive real-time dashboard, showing the weather forecast for the upcoming 24 hours.
 
 ## Requirements
 - Python -- version 3.8.10
